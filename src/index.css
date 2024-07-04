@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+	overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+	width : 8px;
+}
+body::-webkit-scrollbar-track{
+	background : #222831;
+
+}
+body::-webkit-scrollbar-thumb{
+	margin-y:2px;
+	background :  #fff;
+	border-radius: 6px;
+	trasition:background 0.3s ease;
+}
+body::-webkit-scrollbar-thumb:hover{
+	background : #76ABAE;
+
+}
+
+@layer components{
+	.nav-list {
+		@apply text-white p-4 cursor-pointer hover:text-secondary;
+	}
+	.button {
+		@apply bg-secondary text-white py-3 px-5 rounded-full border-transparent box-border border-2 hover:text-secondary hover:border-solid hover:border-2 hover:border-secondary hover:bg-transparent active:bg-secondary active:text-white ;
+	}
+	.nav-icons{
+		@apply fill-white h-8 w-8 mx-2 cursor-pointer hover:fill-secondary;
+	}
+}
